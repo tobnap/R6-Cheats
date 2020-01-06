@@ -1,0 +1,9 @@
+﻿  Infinite Ammo.cpp
+D:\R6 Cheats\R6 Cheats\Infinite Ammo.cpp(59): warning C4244: 'argument': conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+D:\R6 Cheats\R6 Cheats\Infinite Ammo.cpp(60): warning C4244: 'argument': conversion from 'unsigned __int64' to 'DWORD', possible loss of data
+  Main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 13 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  R6 Cheats.vcxproj -> D:\R6 Cheats\x64\Release\R6 Cheats.exe
