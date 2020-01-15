@@ -1,6 +1,6 @@
 #include "Functions.h"
 
-DWORD getPID(const char* ProcessName) {
+DWORD GetPID(const char* ProcessName) {
 	PROCESSENTRY32 processInfo;
 	processInfo.dwSize = sizeof(processInfo);
 
@@ -26,7 +26,7 @@ DWORD getPID(const char* ProcessName) {
 	return processInfo.th32ProcessID;
 }
 
-MODULEENTRY32 getModule(const char* moduleName, unsigned long ProcessID)
+MODULEENTRY32 GetModule(const char* moduleName, unsigned long ProcessID)
 {
 	MODULEENTRY32 modEntry = { 0 };
 
@@ -64,7 +64,31 @@ uintptr_t FindDMAAddy(HANDLE hProc, uintptr_t ptr, std::vector<unsigned int> off
     return addr;
 }
 
-unsigned long long pid = getPID("RainbowSix.exe");
-MODULEENTRY32 module = getModule("RainbowSix.exe", pid);
+uintptr_t RPM(HANDLE hProc, uintptr_t ptr, std::vector<unsigned int> offsets, int &val)
+{
+    uintptr_t addr = ptr;
+    for (unsigned int i = 0; i < offsets.size(); ++i)
+    {
+        ReadProcessMemory(hProc, (BYTE*)addr, &addr, sizeof(addr), 0);
+        addr += offsets[i];
+    }
+	int val = ReadProcessMemory(hProc, (BYTE*)addr, &val, sizeof(val), 0);
+    return 0;
+}
+
+uintptr_t WPM(HANDLE hProc, uintptr_t ptr, std::vector<unsigned int> offsets, int &val)
+{
+    uintptr_t addr = ptr;
+    for (unsigned int i = 0; i < offsets.size(); ++i)
+    {
+        ReadProcessMemory(hProc, (BYTE*)addr, &addr, sizeof(addr), 0);
+        addr += offsets[i];
+    }
+	int val = WriteProcessMemory(hProc, (BYTE*)addr, &val, sizeof(val), 0);
+    return 0;
+}
+
+unsigned long long pid = GetPID("RainbowSix.exe");
+MODULEENTRY32 module = GetModule("RainbowSix.exe", pid);
 unsigned long long moduleBase = ((unsigned long long)module.modBaseAddr);
 HANDLE phandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
