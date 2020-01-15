@@ -1,8 +1,10 @@
 #include "Main.h"
 
-int main()
-{
-	std::cout << "Hello World!\n";
-	ammo();
+int main() {
+	noSpread();
+	noRecoil();
+	infiniteAmmo();
+	weaponFOV();
+	esp();
 	system("pause");
 }

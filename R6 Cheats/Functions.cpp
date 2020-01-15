@@ -52,3 +52,19 @@ MODULEENTRY32 getModule(const char* moduleName, unsigned long ProcessID)
 	}
 	return modEntry;
 }
+
+uintptr_t FindDMAAddy(HANDLE hProc, uintptr_t ptr, std::vector<unsigned int> offsets)
+{
+    uintptr_t addr = ptr;
+    for (unsigned int i = 0; i < offsets.size(); ++i)
+    {
+        ReadProcessMemory(hProc, (BYTE*)addr, &addr, sizeof(addr), 0);
+        addr += offsets[i];
+    }
+    return addr;
+}
+
+unsigned long long pid = getPID("RainbowSix.exe");
+MODULEENTRY32 module = getModule("RainbowSix.exe", pid);
+unsigned long long moduleBase = ((unsigned long long)module.modBaseAddr);
+HANDLE phandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
