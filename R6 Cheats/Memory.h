@@ -30,7 +30,7 @@ T WPM(uintptr_t ptr, std::vector<unsigned int> offsets, T &val)
 }
 
 template <typename T>
-T RPM(uintptr_t ptr, std::vector<unsigned int> offsets, T& val)
+T RPM(uintptr_t ptr, std::vector<unsigned int> offsets, T &val)
 {
 	uintptr_t addr = moduleBase + ptr;
 	for (unsigned int i = 0; i < offsets.size(); ++i)
