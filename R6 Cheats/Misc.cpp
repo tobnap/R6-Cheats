@@ -1,4 +1,5 @@
 #include "Functions.h"
+#include "Memory.h"
 #include "Offsets.h"
 #include <iostream>
 

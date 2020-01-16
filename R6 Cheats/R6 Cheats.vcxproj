@@ -132,6 +132,7 @@
     <ClInclude Include="Aimbot.h" />
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Memory.h" />
     <ClInclude Include="Misc.h" />
     <ClInclude Include="Offsets.h" />
     <ClInclude Include="Vectors.h" />
