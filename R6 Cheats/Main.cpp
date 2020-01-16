@@ -1,7 +1,7 @@
 #include "Main.h"
 
 int main() {
-	aimbot();
+	//aimbot();
 	misc();
 	system("pause");
 }

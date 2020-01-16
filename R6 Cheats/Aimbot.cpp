@@ -1,4 +1,6 @@
+/*
 #include "Functions.h"
+#include "Memory.h"
 #include "Offsets.h"
 #include "Vectors.h"
 #include <iostream>
@@ -51,10 +53,10 @@ Vector3 WorldToScreen(Vector3 position) {
 
 	return Vector3((displayWidth / 2) * (1 + x / GetFOVX() / z), (displayHeight / 2) * (1 - y / GetFOVY() / z), z);
 }
-*/
+
 void aimbot()
 {
-	for (int i = 1/*0 is local player in situations and lw htunt, set to 0 if playing mp*/; i < 9; i++) {
+	for (int i = 1/*0 is local player in situations and lw htunt, set to 0 if playing mp*//*; i < 9; i++) {
 		int fff;
 
 		RPM(GetEntity(i), { OFFSET_ENTITY_HEAD }, fff);
@@ -66,3 +68,4 @@ void aimbot()
 	//RPM(phandle, moduleBase + ADDRESS_GAMEMANAGER, { OFFSET_GAMEMANAGER_ENTITYLIST + OFFSET_GAMEMANAGER_ENTITY + 0x20 + OFFSET_ENTITY_HEAD }, pp);
 	//std::cout << "Pos: " << pp << "\n";
 }
+*/
