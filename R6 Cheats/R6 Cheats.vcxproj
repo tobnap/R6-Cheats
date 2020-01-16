@@ -123,22 +123,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ESP.cpp" />
+    <ClCompile Include="Aimbot.cpp" />
     <ClCompile Include="Functions.cpp" />
-    <ClCompile Include="InfiniteAmmo.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="NoRecoil.cpp" />
-    <ClCompile Include="NoSpread.cpp" />
-    <ClCompile Include="WeaponFOV.cpp" />
+    <ClCompile Include="Misc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ESP.h" />
+    <ClInclude Include="Aimbot.h" />
     <ClInclude Include="Functions.h" />
-    <ClInclude Include="InfiniteAmmo.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="NoRecoil.h" />
-    <ClInclude Include="NoSpread.h" />
-    <ClInclude Include="WeaponFOV.h" />
+    <ClInclude Include="Misc.h" />
+    <ClInclude Include="Offsets.h" />
+    <ClInclude Include="Vectors.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

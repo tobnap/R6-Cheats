@@ -1,10 +1,7 @@
 #include "Main.h"
 
 int main() {
-	noSpread();
-	noRecoil();
-	infiniteAmmo();
-	weaponFOV();
-	esp();
+	aimbot();
+	misc();
 	system("pause");
 }
