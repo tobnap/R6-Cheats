@@ -2,6 +2,7 @@
 
 // Game ->
 #define ADDRESS_GAMEMANAGER 0x52befd8
+#define ADDRESS_GLOWMANAGER 0x5f3f278
 #define ADDRESS_GAMERENDERER 0x52ae868
 
 // Game -> GameRenderer ->
