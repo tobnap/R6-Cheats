@@ -17,7 +17,7 @@ void misc()
 	WPM(ADDRESS_GLOWMANAGER, { 0xb8, 0x118 }, num2 = 139);  //Blue
 	WPM(ADDRESS_GLOWMANAGER, { 0xb8, 0x134 }, num2 = 0);    //Start distance
 	WPM(ADDRESS_GLOWMANAGER, { 0xb8, 0x138 }, num2 = 0);    //Glow distance
-	WPM(ADDRESS_GLOWMANAGER, { 0xb8, 0x13C }, num2 = 2);  //Opacity
+	WPM(ADDRESS_GLOWMANAGER, { 0xb8, 0x13C }, num2 = 2);    //Opacity
 
 	while (true) 
 	{
