@@ -16,7 +16,7 @@ void spoofSpectate(bool toggle)
 
 void esp(bool toggle)
 {
-	short max_entities = 0;
+	short max_entities;
 	short turn_on = 1;
 
 	RPM(ADDRESS_GAMEMANAGER, { OFFSET_GAMEMANAGER_ENTITYCOUNT }, max_entities);

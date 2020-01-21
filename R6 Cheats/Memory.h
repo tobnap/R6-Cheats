@@ -7,7 +7,7 @@ static unsigned long long moduleBase = ((unsigned long long)module.modBaseAddr);
 static HANDLE phandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
 
 template <typename T>
-T RPM(uintptr_t ptr, std::vector<unsigned int> offsets, T &val = 0)
+T RPM(uintptr_t ptr, std::vector<unsigned int> offsets, T &val)
 {
 	uintptr_t addr = moduleBase + ptr;
 	for (unsigned int i = 0; i < offsets.size(); ++i)
