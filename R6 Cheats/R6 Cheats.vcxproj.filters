@@ -24,7 +24,7 @@
     <ClCompile Include="Misc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Aimbot.cpp">
+    <ClCompile Include="Visuals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,10 +44,13 @@
     <ClInclude Include="Aimbot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Vectors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Memory.h">
+    <ClInclude Include="Visuals.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

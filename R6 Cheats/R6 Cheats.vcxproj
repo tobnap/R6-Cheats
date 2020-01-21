@@ -123,10 +123,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Aimbot.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Misc.cpp" />
+    <ClCompile Include="Visuals.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aimbot.h" />
@@ -136,6 +136,7 @@
     <ClInclude Include="Misc.h" />
     <ClInclude Include="Offsets.h" />
     <ClInclude Include="Vectors.h" />
+    <ClInclude Include="Visuals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
